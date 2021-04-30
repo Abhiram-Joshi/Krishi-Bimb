@@ -1,0 +1,72 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Sign Up</title>
+	<link href="{% static 'bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/css/bootstrap.min.css">
+	<!-- Font Awesome -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+	<!-- MDB -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.css" rel="stylesheet" />
+	<link rel="stylesheet" href="{% static 'css/styles2.css' %}">
+
+	<style>
+		.card-signin .card-img-left {
+			max-height: 900px;
+			width: 50%;
+			background: scroll center url("{% static 'images/image.svg' %}");
+			background-size: cover;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-10 col-xl-9 mx-auto">
+				<div class="card card-signin flex-row my-5">
+					<div class="card-body">
+						<h3 class="card-title text-center"><b>Sign Up</b></h3>
+						<form class="form-signin" method="POST">
+							{% csrf_token %}
+							<button class="btn btn-lg btn-google btn-block" type="submit"><i
+									class="fab fa-google mr-2"></i> Sign up with Google</button>
+							<button class="btn btn-lg btn-facebook btn-block" type="submit"><i
+									class="fab fa-facebook-f mr-2"></i> Sign up with Facebook</button>
+							<hr class="my-4">
+							{% for field in user_form %}
+							<div class="form-label-group">
+								{{field}}
+								<!-- <label for="{{field.id}}">Name</label> -->
+							</div>
+							{% endfor %}
+							{% for field in user_profile_form %}
+							<div class="form-label-group">
+								{{field}}
+								<!-- <label for="{{field.id}}">Name</label> -->
+							</div>
+							{% endfor %}
+							<button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Sign
+								Up</button>
+							<a class="d-block text-center mt-2 small" href="{% url 'account:user_login' %}">Already have
+								an account? Sign In</a>
+						</form>
+					</div>
+					<div class="card-img-left d-md-5">
+						<img src="{% static 'images/Logo.svg' %}" class="image1">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
