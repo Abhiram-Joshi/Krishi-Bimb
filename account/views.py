@@ -20,8 +20,6 @@ def user_signup(request):
             user.set_password(user.password)
             user.save()
 
-            print("###########################")
-
             user_profile = user_profile_form.save(commit=False)
             user_profile.user = user
             user_profile.save()
@@ -71,7 +69,7 @@ def user_login(request):
         return render(request, "login.html", {"form": form})
 
 
-# @login_required
-# def user_logout(request):
-#     logout(request)
-#     return HttpResponseRedirect(reverse("webpage:home"))
+@login_required
+def user_logout(request):
+    logout(request)
+    return HttpResponseRedirect(reverse("webpage:home"))

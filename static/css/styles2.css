@@ -4,7 +4,8 @@
 }
 
 body {
-  background: #fcfcd2;
+  /* background: #fcfcd2; */
+  background: white;
 }
 
 .card-signin {
