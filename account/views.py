@@ -25,6 +25,7 @@ def user_signup(request):
             user_profile.save()
 
             registered = True
+            return redirect("webpage:home")
 
         else:
             print(user_profile_form.errors)
