@@ -60,7 +60,6 @@ class crop_detail_view(DetailView):
     template_name = "buyer_portal.html"
     context_object_name = "crop"
 
-
 @login_required
 def bid_update(request, id):
 

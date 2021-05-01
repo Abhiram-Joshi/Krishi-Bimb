@@ -7,6 +7,7 @@ html,body
     overflow-x: hidden;
     scroll-behavior: smooth;
     background-color: #ffffff;
+	font-family: Inter;
 }
 .part2{
 	margin-top: 60px;
@@ -94,8 +95,9 @@ html,body
 	margin-top: 125px;
 }
 .header4{
-	margin-top: 50px;
+	/* margin-top: 50px; */
 	margin-bottom: 100px;
+	background-color: #E6F1E5;
 }
 .left{
 	padding-left: 80px;
