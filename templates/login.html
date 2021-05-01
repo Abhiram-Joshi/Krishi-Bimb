@@ -44,6 +44,7 @@
 									class="fab fa-facebook-f mr-2"></i> Sign in with Facebook</button>
 							<hr class="my-4">
 							{% for field in form %}
+							<label for="{{field.id}}">{{field.name}}</label>
 							<div class="form-label-group">
 								{{ field }}
 							</div>
