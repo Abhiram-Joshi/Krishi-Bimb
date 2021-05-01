@@ -1,0 +1,61 @@
+html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    background-color: #ffffff;
+}
+.line1{
+	margin-left: 750px;
+}
+.Paragraph{
+	text-align: center;
+	margin-top: 110px;
+	color: green;
+	font-family: Inter;
+	font-size: 60px;
+	margin-bottom: 60px;
+}
+.Line1{
+	margin-left: 10px;
+}
+.part1{
+	margin-bottom: 20px;
+}
+.part2{
+	margin-left: 10px;
+}
+.Line2{
+	margin-left: 10px;
+}
+.part3{
+	margin-bottom: 20px;
+}
+.part4{
+	margin-left: 10px;
+}
+.part5{
+	margin-left: 10px;
+}
+.Line3{
+	margin-top: 20px;
+}
+.part6{
+	margin-left: 10px;
+}
+.Line4{
+	margin-top: 20px;
+}
+.Line5{
+	margin-top: 20px;
+}
+.button1{
+	margin-top: 30px;
+}
+.Line5{
+	max-width: 75%;
+	padding-bottom: 5px;
+}

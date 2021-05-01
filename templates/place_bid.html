@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+
+<head>
+    <title>Buy here</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles3.css'%} ">
+</head>
+
+<body background="{% static 'images/background.jpeg' %}" style="background-size:cover;">
+
+
+    {% if placed %}
+    <h1 style="font-family:Inter; margin-top:20%;">Bid placed</h1>
+
+    {% else %}
+    <div id="Heading" style="margin-top:10%;">
+        <h2 style="font-size: 80px;margin-top:-5%;"><span class="middle">Buy</span> here</h2>
+    </div>
+
+    <div id="Register">
+        <h1 style="font-family:Inter; margin-top:20%;">Place your bid here!!</h1>
+    </div>
+
+    <form class="forms" method="post" style="margin-left:8%;">
+        {% csrf_token %}
+        <!-- <h2 style="margin-left:-42%;">Enter your bid</h2> -->
+        {{form}}
+        <br>
+        <h1 style="font-family:Inter;font-size:20px;margin-left:-40%;">The highest bid till now is {{highest_bid}}</h1>
+        <input type="submit" name="" value="Submit" style="margin-top:5%;margin-left:22%;">
+
+    </form>
+
+    {% endif %}
+
+
+    </form>
+
+</body>
+
+</html>

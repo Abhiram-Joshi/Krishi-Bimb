@@ -126,5 +126,9 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
 ]
 
+from django.urls import reverse_lazy
+
+LOGIN_URL = reverse_lazy("account:user_login")
+
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 MEDIA_URL = "/media/"

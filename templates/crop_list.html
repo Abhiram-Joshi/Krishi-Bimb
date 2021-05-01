@@ -1,0 +1,46 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Buy here</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles3.css'%} ">
+</head>
+
+<body background="{% static 'images/background.jpeg' %}" style="background-size:cover;">
+
+    <div id="Heading" style="margin-top:10%;">
+        <h2 style="font-size: 80px;margin-top:-5%;"><span class="middle">Buy</span> here</h2>
+    </div>
+
+    <div id="Register">
+        <h1 style="font-family:Inter; margin-top:20%;">Buy your crops here!!</h1>
+    </div>
+
+    <form class="forms" style="margin-left:12%;">
+
+        {% for item in list %}
+
+        <label>
+            <h3>Name</h3>
+            <input type="text" placeholder="Crop Name" name="Name" required="" value="{{item.crop}}" readonly>
+        </label>
+
+        <br>
+        <br>
+
+
+        <div class="row">
+
+            <a href="{{item.id}}"> <input type="button" value="Select"> </a>
+        </div>
+
+
+        {% endfor %}
+    </form>
+
+</body>
+
+</html>

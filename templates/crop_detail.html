@@ -1,0 +1,67 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Buy here</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles3.css'%} ">
+</head>
+
+<body background="{% static 'images/background.jpeg' %}" style="background-size:cover;">
+
+    <div id="Heading" style="margin-top:10%;">
+        <h2 style="font-size: 80px;margin-top:-5%;"><span class="middle">Buy</span> here</h2>
+    </div>
+
+    <div id="Register">
+        <h1 style="font-family:Inter; margin-top:20%;">Buy your crops here!!</h1>
+    </div>
+
+
+    <form class="forms" style="margin-left:12%;">
+
+
+
+        <label>
+            <h3>Name</h3>
+
+            <input type="text" placeholder="Crop Name" name="Name" required="" value="{{crop.crop}}">
+        </label>
+        <br>
+        <br>
+        <label>
+            <h3>Place</h3>
+            <input type="Address" placeholder="Preffered location" name="Address" required="" style="height: 50px"
+                value="{{crop.place}}">
+        </label>
+        <br>
+        <br>
+
+        <br>
+        <br>
+        <label>
+            <h3>Details</h3>
+            <input type="text" placeholder="Details of the product..." name="Give Description about your crop"
+                required="" style="height: 100px" value="{{crop.description}}">
+        </label>
+        <br>
+        <br>
+        <label>
+            <h3>Image</h3>
+            <img src="{{crop.photo.url}}" alt="" height="100%" width="100%">
+
+        </label>
+
+        {% comment %}
+        <div class="row">
+            <a href="{% url 'webpage:bid_update' crop.id %}"> <input type="button" value="Place Bid"> </a>
+        </div>
+        {% endcomment %}
+
+
+    </form>
+
+</body>
+
+</html>

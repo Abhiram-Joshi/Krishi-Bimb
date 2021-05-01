@@ -1,0 +1,100 @@
+
+html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    background-color: #FFFDF8;
+}
+
+.n{
+	background-color: #F4F4F4;
+	width:auto;
+	border-radius: 28px;
+}
+
+.form-control{
+	width:300px;
+}
+
+.line1{
+	margin-left: 750px;
+}
+
+.Paragraph{
+	text-align: center;
+	margin-top: 110px;
+	font-size:88px; 
+	color: #219653;
+	font-family:inter;
+	font-weight:8rem;
+}
+
+.header2{
+	margin-left: 180px;
+	margin-top: 50px;
+}
+
+.row{
+	margin-bottom: 30px;
+}
+.button1{
+	margin-top: 20px;
+	margin-left: 200px;
+}
+.button2{
+	margin-top: 20px;
+}
+
+.form-control{
+	border-color: green;
+	border-width: 2px 2px 2px 2px;
+	width:400px;
+} 
+
+.form-outline{
+	padding-right: 0;
+}
+
+.button3{
+	margin-top: 275px;
+	margin-left: 150px;
+}
+.button4{
+	margin-left: 150px;
+}
+
+.col-lg-4 h5{
+	font-size:32px;
+	padding-right: 0;
+}
+
+.nav-btn{
+	border:transparent;
+	background-color: transparent;
+	border-radius: 2px;
+	padding-right: 5px;
+	padding-top: 23px;
+	padding-bottom: 23px;
+}
+
+.col-lg-4:active{
+	background-color: white; 
+	border-radius: 10px; 
+}
+
+.col-lg-4 h5:active{
+	color:#219653;
+}
+
+.header3{
+	margin-left: 180px;
+	margin-top: 50px;
+}
+
+.form-control:hover{
+	box-shadow: 1px 1px 1px 1px grey;
+}

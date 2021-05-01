@@ -1,0 +1,131 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Buyer</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/css/bootstrap.min.css">
+	<!-- Font Awesome -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+	<!-- MDB -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.css" rel="stylesheet" />
+	<link rel="stylesheet" href="{% static 'css/styles5.css' %}">
+</head>
+
+<body>
+
+	<div class="container-fluid header1 shadow p-3 mb-5 bg-white rounded">
+		<nav class="navbar navbar-expand-lg navbar-light ">
+			<img src="file:///C:/Users/Shreyan%20Sanyal/Desktop/Web%20Dev(Frontend)/E-Hack/Asset%203%201.svg"
+				height="70px"><a class="navbar-brand" href="#">
+				<h3 class="topic" style="margin-left: 20px; font-family: Inter; color: green;">Krishi Bimb</h3>
+			</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+				data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse line1" id="navbarSupportedContent">
+				<ul class="navbar-nav flex-row flex-wrap navbar1">
+					<li>
+						<p>Varun Sharma</p>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</div>
+
+	<h3 class="Paragraph">BUYER</h3>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6">
+				<div class="row">
+					<div class="col-lg-6">
+						<h5 style="font-family: Inter">Crop Name</h5>
+						<br>
+						<input type="text" class="form-control part1" placeholder="Crop name" value={{crop.crop}}
+							readonly>
+					</div>
+					<div class="col-lg-6">
+						<h5 class="Line1" style="font-family: Inter">Farmer</h5>
+						<br>
+						<input type="text" class="form-control part2" placeholder="Farmer name"
+							value={{crop.user.username}} readonly>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-6">
+						<h5 style="font-family: Inter">Base Price</h5>
+						<br>
+						<input type="text" class="form-control part3" placeholder="Base Price name"
+							value={{crop.min_price}} readonly>
+					</div>
+					<div class="col-lg-6">
+						<h5 class="Line2" style="font-family: Inter">Top Bid</h5>
+						<br>
+						<input type="text" class="form-control part4" placeholder="Top Bid" value={{crop.highest_bid}}
+							readonly>
+					</div>
+				</div>
+				<div class="row">
+					<h5 style="font-family: Inter">Stock Available</h5>
+					<br>
+					<input type="text" class="form-control part5" placeholder="Stock Available" value={{crop.stock}}
+						readonly>
+				</div>
+				<div class="row" style="padding-bottom: 50px">
+					<h5 class="Line3" style="font-family: Inter">Additional Notes</h5>
+					<br>
+					<input type="text" class="form-control part6" placeholder="Additional notes"
+						value={{crop.description}} style="padding-bottom: 50px" readonly>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<center>
+		<hr class="Line5">
+	</center>
+
+	<div class="container">
+
+		<!-- <div class="row">
+				<div class="col">
+					<h2 class="Line4" style="margin-left: 400px">Quantity</h2>
+				</div>
+				<div class="col">
+					<input type="text" class="form-control part7" placeholder="Quantity" style="margin-top: 28.33px">
+				</div>
+				<div class="row">
+					<div class="col">
+						<h2 class="Line5" style="margin-left: 350px">Bid Amount</h2>
+					</div>
+					<div class="col">
+						<input type="text" class="form-control part8" placeholder="Bid Amount"
+							style="margin-top: 28.33px; margin-left: 14px; padding-right: 20px;">
+					</div>
+				</div>
+			</div> -->
+
+		<!-- <button type="button" class="btn btn-success button1" style="margin-left: 350px">Place Bid</button> -->
+		<a href="{% url 'webpage:bid_update' id=crop.pk %}"><button type="button"
+				class="btn btn-outline-success button2" data-mdb-ripple-color="dark">Place bid!</button></a>
+
+		<!-- <button type="button" class="btn btn-outline-success button2" data-mdb-ripple-color="dark">Cancel</button> -->
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+			crossorigin="anonymous"></script>
+		<script type="text/javascript"
+			src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.js"></script>
+</body>
+
+</html>
